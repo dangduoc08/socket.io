@@ -1,0 +1,27 @@
+@import "../../../App";
+
+.nav-text {
+    color: $textColor;
+    display: block;
+    padding-top: .5rem;
+    font: {
+        weight: bold;
+    }
+}
+.nav-link {
+    color: white;
+    border-radius: 5px;
+    font: {
+        weight: bold;
+    }
+    &:hover {
+        background: $primaryHoverColor;
+        color: white;
+        text: {
+            decoration: underline;
+        }
+    }
+}
+.isActivating {
+    background: $primaryHoverColor;
+}

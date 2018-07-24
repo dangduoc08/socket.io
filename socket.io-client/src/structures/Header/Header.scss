@@ -1,0 +1,10 @@
+@import '../../App.scss';
+
+$header : ".header";
+
+#{$header} {
+    background: {
+        color: $primaryColor;
+    }
+    padding: 1rem 0 1rem 0;
+}

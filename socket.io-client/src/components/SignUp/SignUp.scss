@@ -1,0 +1,60 @@
+@import '../../App.scss';
+
+.signup {
+    background: $bgColor;
+    &:before, &:after {
+        content: '';
+        display: block;
+        height: 20px;
+    }
+    &__content {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    &__title {
+        @include centerTitle;
+    }
+    &__input, &__button {
+        height: 4rem;
+        margin: {
+            top: .5%;
+            bottom: .5%;
+        }
+    }
+    &__input {
+        &--invalid {
+            color: #495057;
+            background-color: #fff;
+            border-color: red;
+            outline: 0;
+        }
+        /* fix lại 2 input firstName và lastName để lên cùng hàng */
+        @media all and (min-width: 768px) {
+            &--inline {
+                flex: 0 0 50%;
+                max-width: 49.46%;
+            }
+            &--left {
+                left: 1%;
+            }
+        }
+    }
+    &__warning {
+        color: white;
+        padding: {
+            top: 4px;
+            bottom: 4px;
+        }
+        text: {
+            align: center;
+        }
+        font: {
+            size: 1rem;
+        }
+        &--empty:before, &--empty:after {
+            content: '';
+            display: block;
+            height: 1rem;
+        }
+    }
+}

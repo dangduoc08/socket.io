@@ -1,0 +1,64 @@
+@import '../../App.scss';
+
+.signin {
+    max-width: 500px;
+    background: $bgColor;
+    &:before, &:after {
+        content: '';
+        display: block;
+        height: 35px;
+    }
+    &__content {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    &__title {
+        @include centerTitle;
+    }
+    &__input, &__button {
+        height: 4rem;
+        margin: {
+            top: 1%;
+            bottom: 1%;
+        }
+    }
+    &__input {
+        padding: {
+            left: 4rem;
+        }
+    }
+    &__icon {
+       display: inline;
+        max-height: 0;
+        position: relative;
+        bottom: 3rem;
+        color: $inputBorderColor;
+        padding: {
+            left: 1.4rem
+        } 
+        font: {
+            size: 1.5rem;
+        }
+        vertical: {
+            align: text-top;
+        }
+    }
+    &__warning {
+        color: white;
+        padding: {
+            top: 4px;
+            bottom: 4px;
+        }
+        text: {
+            align: center;
+        }
+        font: {
+            size: 1rem;
+        }
+        &--empty:before, &--empty:after {
+            content: '';
+            display: block;
+            height: 1rem;
+        }
+    }
+}

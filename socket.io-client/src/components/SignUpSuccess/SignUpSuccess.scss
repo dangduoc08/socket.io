@@ -1,0 +1,37 @@
+@import '../../App.scss';
+
+.signup-success {
+    text: {
+        align: center;
+    }
+    .fa-check-circle {
+        font: {
+            size: 5rem;
+        }
+    }
+    margin-top: 2rem;
+    &:before, &:after {
+        content: '';
+        display: block;
+        height: 20px;
+    }
+    &__content {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    &__title {
+        @include centerTitle;
+    }
+    &__text {
+        color: $textColor;
+        font: {
+            size: 2rem;
+        }
+    }
+    .fa-long-arrow-alt-left {
+        margin: {
+            top: 1rem;
+            right: 2px;
+        }
+    }
+}

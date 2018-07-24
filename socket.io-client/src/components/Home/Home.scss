@@ -1,0 +1,20 @@
+@import "../../App";
+
+.home {
+    background: $bgColor;
+    min-height: 100%;
+    &:before, &:after {
+        content: '';
+        display: block;
+        height: 150px;
+        }
+    &__container {
+        margin: auto;
+        max-width: 700px;
+        text-align: center;
+    }
+    &__avatar { 
+        margin: -100px auto 0;
+        overflow: hidden;
+    }
+}

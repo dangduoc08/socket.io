@@ -1,0 +1,116 @@
+@import "../../App";
+
+.chat {
+    &:before, &:after {
+        content: '';
+        display: block;
+        height: 32px;
+    }
+    &__title {
+        @include centerTitle;
+        background: {
+            color: $bgColor;
+        }
+    }
+    &__message {
+        list-style: none;
+        padding: 2rem;
+        height: 370px;
+        display: block;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin: 0px;
+        border: 1px solid rgba(0, 0, 0, .10);
+        &::-webkit-scrollbar {
+            width: 10px;
+            &-track {
+                background: $bgColor; 
+            }
+            &-thumb {
+                background: $primaryColor;
+                &:hover {
+                    background: $primaryHoverColor;
+                }
+            }
+        }
+        &--left {
+            margin-bottom: 10px;
+            .chat__avatar {
+                max-width: 4rem;
+                max-height: 4rem;
+                border-radius: 50%;
+                padding: {
+                    left: 0px;
+                    right: 0px;
+                }
+            }
+            .tringle {
+                width: 0px;
+                height: 0px;
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-right: 20px solid #ffe6cb;
+                position: relative;
+                top: 12px;
+                left: 1px;
+            }
+            .chat__wrapper {
+                background: {
+                    color: #ffe6cb;
+                }
+                .chat__text {
+                    color: #c48843;
+                }
+            }
+        }
+        &--right {
+            margin-bottom: 10px;
+            .chat__avatar {
+                max-width: 4rem;
+                max-height: 4rem;
+                border-radius: 50%;
+                padding: {
+                    left: 0px;
+                    right: 0px;
+                }
+            }
+             .tringle {
+                width: 0px;
+                height: 0px;
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-left: 20px solid #c7eafc;
+                position: relative;
+                top: 12px;
+                right: 1px;
+            }
+            .chat__wrapper {
+                 background: {
+                    color: #c7eafc;
+                }
+                .chat__text {
+                    color: #45829b;
+                }
+            }
+        }
+    }
+    &__wrapper {
+        padding: 20px;
+        border-radius: 6px;
+        min-width: 100px;
+    }
+    &__input {
+        padding: 1.5rem;
+        margin: 0px;
+        input {
+            border-radius: 35px;
+            height: 50px;
+        }
+        button {
+            border-radius: 35px;
+            margin: {
+                left: 5px;
+            }
+        }
+    }
+}

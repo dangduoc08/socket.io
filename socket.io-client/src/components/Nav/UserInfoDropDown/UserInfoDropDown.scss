@@ -1,0 +1,13 @@
+@import "../../../App";
+
+.nav-dropdown {
+    color: white;
+    background: $primaryHoverColor;
+}
+.nav-name {
+    color: white;
+    font: {
+        weight: bold;
+    }
+    background: $primaryHoverColor;
+}

@@ -1,0 +1,27 @@
+$primaryColor: #E64A19;
+$primaryHoverColor: #f27047;
+$secondaryColor: #303F9F;
+$bgColor: #f1f1f1;
+$textColor: #212121;
+$inputBorderColor: #bdc7d8;
+
+@mixin centerTitle {
+    padding: 1.5rem 0 1.5rem 0;
+    color: $textColor;
+    font: {
+        weight: bold;
+        size: 2rem;
+    }
+    text: {
+        align: center;
+    }
+}
+
+/* Sửa style input focus của bootstrap */
+.form-control {
+    border-color: $inputBorderColor;
+    &:focus {
+        box-shadow: none;
+        border-color: $inputBorderColor;
+    }
+}
